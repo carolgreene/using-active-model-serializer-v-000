@@ -12,8 +12,8 @@ class PostsController < ApplicationController
       #render json: @post.to_json(only: [:title, :description, :id],
                                 #include: [author: { only: [:name]}])
        # AFTER USING OUR SERIALIZER
-       format.json { render json: @post, status 200 }
-   end
+     render json: @post, status: 200
+  end
 
   def new
     @post = Post.new
